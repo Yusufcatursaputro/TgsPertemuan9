@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
+    tools:context=".BerandaFragment">
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selamat Malam, Ikhwan Hanip pridauz"
+        android:textSize="10dp"
+        android:fontFamily="@font/poppins"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/logo_bni"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:src="@drawable/logo_bank_bni_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
+    <TextView
+        android:id="@+id/saldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/qualion_regular"
+        android:text="Saldo"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_bni" />
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/saldo"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:id="@+id/line_1"
+            android:layout_width="60dp"
+            android:layout_height="3dp"
+            android:background="#E16417"/>
+        <View
+            android:id="@+id/line_2"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/black"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/txt_home_container"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:background="@drawable/rounded_corner_container"
+        android:paddingVertical="15dp"
+        android:paddingHorizontal="25dp"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        android:layout_marginTop="20dp"
+        android:elevation="3dp">
+
+        <TextView
+            android:id="@+id/txt_name_inside_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="IKHWAN HANIF FRIDAUZ"
+            android:textSize="10sp"
+            android:textColor="#252525"
+            android:fontFamily="@font/poppins"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/txt_detail_inside_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BNI Taplus Muda | 7263-2938-2390-****"
+            android:fontFamily="@font/qualion_regular"
+            android:textColor="#252525"
+            app:layout_constraintTop_toBottomOf="@id/txt_name_inside_container"
+            android:textSize="9sp"
+            tools:ignore="MissingConstraints" />
+        <ImageView
+            android:id="@+id/arrow_down_inside"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_keyboard_arrow_down_24"
+            app:layout_constraintTop_toTopOf="@id/txt_detail_inside_container"
+            app:layout_constraintBottom_toBottomOf="@id/txt_detail_inside_container"
+            app:layout_constraintStart_toEndOf="@id/txt_detail_inside_container"/>
+        <ImageView
+            android:id="@+id/copy_inside"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toTopOf="@id/txt_name_inside_container"
+            app:layout_constraintBottom_toBottomOf="@id/txt_detail_inside_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/baseline_content_copy_24" />
+        <TextView
+            android:id="@+id/nominal_inside"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp  ********"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/qualion_regular"
+            app:layout_constraintTop_toBottomOf="@id/txt_detail_inside_container"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"
+            />
+        <ImageView
+            android:id="@+id/icon_eye_inside"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:src="@drawable/baseline_visibility_off_24"
+            app:layout_constraintTop_toTopOf="@id/nominal_inside"
+            app:layout_constraintBottom_toBottomOf="@id/nominal_inside"
+            app:layout_constraintStart_toEndOf="@id/nominal_inside"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="5dp"/>
+
+        <LinearLayout
+            android:id="@+id/btn_container_inside"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/nominal_inside"
+            app:layout_constraintEnd_toEndOf="@id/icon_eye_inside"
+            app:layout_constraintTop_toBottomOf="@id/nominal_inside">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="#E16417"
+                android:text="Tarik Tunai"
+                android:fontFamily="@font/qualion_regular"
+                android:padding="1dp"
+                android:layout_weight="1" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="#E16417"
+                android:text="Setor Tunai"
+                android:fontFamily="@font/qualion_regular"
+                android:padding="1dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/shortcut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shortcut Kamu"
+        android:fontFamily="@font/qualion_regular"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_home_container"
+        android:layout_marginTop="30dp"/>
+
+    <LinearLayout
+        android:id="@+id/shortcut_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/shortcut"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingBottom="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/shortcut_1_1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner_container"
+            android:layout_marginRight="10dp"
+            android:padding="8dp"
+            android:elevation="3dp">
+
+            <ImageView
+                android:id="@+id/transfer"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/transfer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/transfer_uang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transfer Uang"
+                app:layout_constraintLeft_toRightOf="@id/transfer"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginHorizontal="10dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/shortcut_1_2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner_container"
+            android:padding="8dp"
+            android:elevation="3dp">
+
+            <ImageView
+                android:id="@+id/va"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/va"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/virtual_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Virtual Account"
+                app:layout_constraintLeft_toRightOf="@id/va"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginHorizontal="10dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shortcut_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/shortcut_1"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/shortcut_2_1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner_container"
+            android:layout_marginRight="10dp"
+            android:padding="8dp"
+            android:elevation="3dp">
+
+            <ImageView
+                android:id="@+id/smartphone"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/smartphone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/pulsa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pulsa / Data"
+                app:layout_constraintLeft_toRightOf="@id/smartphone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginHorizontal="10dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/shortcut_2_2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner_container"
+            android:padding="8dp"
+            android:elevation="3dp">
+
+            <ImageView
+                android:id="@+id/more"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/more"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menu Lengkap"
+                app:layout_constraintLeft_toRightOf="@id/more"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginHorizontal="10dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/insigh_bni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insight BNI"
+        android:fontFamily="@font/qualion_regular"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shortcut_2"
+        android:layout_marginTop="20dp"/>
+
+    <HorizontalScrollView
+        android:id="@+id/insigh_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/insigh_bni"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/rectangle_1"
+                android:layout_width="142dp"
+                android:layout_height="80dp"
+                android:src="@drawable/rectangle_1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:id="@+id/rectangle_2"
+                android:layout_width="142dp"
+                android:layout_height="80dp"
+                android:src="@drawable/rectangle_2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/rectangle_1"
+                android:layout_marginLeft="30dp"/>
+
+            <ImageView
+                android:id="@+id/rectangle_3"
+                android:layout_width="142dp"
+                android:layout_height="80dp"
+                android:src="@drawable/rectangle_3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/rectangle_2"
+                android:layout_marginLeft="30dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/berandaFragment"
+        android:icon="@drawable/home_1"
+        android:title="Beranda"
+        app:iconTint="@color/white"
+        app:itemTextAppearance="@style/CustomTextAppearance" />
+    <item
+        android:id="@+id/mutasiFragment"
+        android:icon="@drawable/mutasi"
+        android:title="Mutasi"
+        app:iconTint="@color/white"
+        app:itemTextAppearance="@style/CustomTextAppearance" />
+    <item
+        android:id="@+id/inboxFragment"
+        android:icon="@drawable/inbox"
+        android:title="Inbox"
+        app:iconTint="@color/white"
+        app:itemTextAppearance="@style/CustomTextAppearance" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/profile_2"
+        android:title="Profile"
+        app:iconTint="@color/white"
+        app:itemTextAppearance="@style/CustomTextAppearance" />
+</menu>
